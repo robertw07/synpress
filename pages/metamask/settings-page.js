@@ -71,11 +71,11 @@ const addNetworkButton = '.networks-tab__body button';
 module.exports.networksPageElements = { addNetworkButton };
 
 const addNetworkForm = '.networks-tab__add-network-form-body';
-const networkNameInput = `${addNetworkForm} .form-field:nth-child(1) input`;
-const rpcUrlInput = `${addNetworkForm} .form-field:nth-child(2) input`;
-const chainIdInput = `${addNetworkForm} .form-field:nth-child(3) input`;
-const symbolInput = `${addNetworkForm} [data-testid="network-form-ticker"] input`;
-const blockExplorerInput = `${addNetworkForm} .form-field:nth-child(5) input`;
+const networkNameInput = `${addNetworkForm} [data-testid="network-form-network-name"]`;
+const rpcUrlInput = `${addNetworkForm} [data-testid="network-form-rpc-url"]`;
+const chainIdInput = `${addNetworkForm} [data-testid="network-form-chain-id"]`;
+const symbolInput = `${addNetworkForm} [data-testid="network-form-ticker-input"]`;
+const blockExplorerInput = `${addNetworkForm} [data-testid="network-form-block-explorer-url"]`;
 const saveButton = '.networks-tab__add-network-form-footer .btn-primary';
 const switchButton = '.home__new-network-added__switch-to-button';
 module.exports.addNetworkPageElements = {
