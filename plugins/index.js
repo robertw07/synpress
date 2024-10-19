@@ -62,11 +62,14 @@ module.exports = (on, config) => {
     switchToMetamaskWindow: playwright.switchToMetamaskWindow,
     switchToMetamaskNotification: playwright.switchToMetamaskNotification,
     unlockMetamask: metamask.unlock,
+    openMetamaskHomePage: metamask.switchToMetamaskIfNotActive,
     importMetamaskAccount: metamask.importAccount,
     createMetamaskAccount: metamask.createAccount,
     renameMetamaskAccount: metamask.renameAccount,
     switchMetamaskAccount: metamask.switchAccount,
     addMetamaskNetwork: metamask.addNetwork,
+    sendNativeTx: metamask.sendNativeTx,
+    metamaskScreenshot: metamask.metamaskScreenshot,
     changeMetamaskNetwork: async network => {
       if (process.env.NETWORK_NAME && !network) {
         network = process.env.NETWORK_NAME;

@@ -21,6 +21,10 @@ const tabs = {
   activityButton: '[data-testid="home__activity-tab"] button',
 };
 
+const featureTabs = {
+  sendButton: '[data-testid="eth-overview-send"]',
+};
+
 const transactionList = '.transaction-list__transactions';
 const pendingTransactionsList = `${transactionList} .transaction-list__pending-transactions`;
 const completedTransactionsList = `${transactionList} .transaction-list__completed-transactions`;
@@ -42,6 +46,10 @@ const popup = {
   closeButton: '.popover-header__button',
   background: '.popover-bg',
   sendPopup: {
+    currencyInput: '[data-testid="currency-input"]',
+    toInput: '[data-testid="ens-input"]',
+    continueButton: '.multichain-send-page__nav-button button',
+    confirmButton: '[data-testid="page-container-footer-next"]',
     container: sendPopupSelector,
     speedUpButton: `${sendPopupSelector} .btn-primary`,
     cancelButton: `${sendPopupSelector} .btn-secondary`,
@@ -148,6 +156,7 @@ const asset = {
 module.exports.mainPageElements = {
   networkSwitcher,
   walletOverview,
+  featureTabs,
   tabs,
   activityTab,
   popup,

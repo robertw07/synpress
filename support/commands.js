@@ -41,6 +41,14 @@ Cypress.Commands.add('addMetamaskNetwork', network => {
   return cy.task('addMetamaskNetwork', network);
 });
 
+Cypress.Commands.add('sendNativeTx', txObj => {
+  return cy.task('sendNativeTx', txObj);
+});
+
+Cypress.Commands.add('metamaskScreenshot', path => {
+  return cy.task('metamaskScreenshot', path);
+});
+
 Cypress.Commands.add('changeMetamaskNetwork', network => {
   return cy.task('changeMetamaskNetwork', network);
 });

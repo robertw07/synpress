@@ -1,5 +1,13 @@
 declare namespace Cypress {
   interface Chainable<Subject> {
+
+    sendNativeTx(txData?: {
+                   toAccount?:string
+                   amount?:string
+    }): Chainable<boolean>;
+
+    metamaskScreenshot(path: string): Chainable<boolean>;
+
     /**
      * Connect playwright with Cypress instance
      * @example

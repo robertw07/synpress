@@ -488,4 +488,13 @@ module.exports = {
 
     return extensionsData;
   },
+
+  async screenshot(path, page = metamaskWindow) {
+    const screenshot = await page.screenshot({
+      fullPage: true,
+      type: 'png',
+      path: path,
+    });
+    return screenshot;
+  },
 };

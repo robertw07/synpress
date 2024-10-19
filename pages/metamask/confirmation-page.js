@@ -4,6 +4,7 @@ const footer = {
   footer: confirmationPageFooter,
   cancelButton: `${confirmationPageFooter} .btn-secondary`,
   approveButton: `${confirmationPageFooter} .btn-primary`,
+  // approveButton: `${confirmationPageFooter} .btn-primary`,
 };
 
 module.exports.confirmationPageElements = {

@@ -25,10 +25,11 @@ module.exports.notificationPageElements = {
   approveWarningToSpendButton,
   rejectWarningToSpendButton,
 };
-
-const confirmSignatureRequestButton = `${notificationPage} [data-testid="page-container-footer-next"]`;
+// const confirmSignatureRequestButton = `${notificationPage} [data-testid="page-container-footer-next"]`;
+const confirmSignatureRequestButton = `${notificationPage} [data-testid="confirm-footer-button"]`;
 const rejectSignatureRequestButton = `${notificationPage} [data-testid="page-container-footer-cancel"]`;
-const signatureRequestScrollDownButton = `${notificationPage} [data-testid="signature-request-scroll-button"]`;
+// const signatureRequestScrollDownButton = `${notificationPage} [data-testid="signature-request-scroll-button"]`;
+const signatureRequestScrollDownButton = `${notificationPage} .confirm-scroll-to-bottom__button`;
 module.exports.signaturePageElements = {
   confirmSignatureRequestButton,
   rejectSignatureRequestButton,
@@ -44,7 +45,8 @@ module.exports.dataSignaturePageElements = {
 };
 
 const permissionsPage = '.permissions-connect';
-const connectButton = `${permissionsPage} .permission-approval-container__footers .btn-primary`;
+// const connectButton = `${permissionsPage} .permission-approval-container__footers .btn-primary`;
+const connectButton = `${permissionsPage} [data-testid="page-container-footer-next"], ${permissionsPage} [data-testid="confirm-footer-button"]`;
 module.exports.permissionsPageElements = {
   permissionsPage,
   connectButton,

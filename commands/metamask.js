@@ -1578,7 +1578,49 @@ const metamask = {
       }
     }
   },
+
+  async sendNativeTx(txObj) {
+    await switchToMetamaskIfNotActive();
+    await playwright.waitAndClick(mainPageElements.featureTabs.sendButton);
+    await playwright.waitAndType(
+      mainPageElements.popup.sendPopup.toInput,
+      txObj.toAccount,
+    );
+    await playwright.waitAndType(
+      mainPageElements.popup.sendPopup.currencyInput,
+      txObj.amount,
+    );
+    await playwright.waitAndClick(
+      mainPageElements.popup.sendPopup.continueButton,
+    );
+
+    await playwright.waitAndClick(
+      mainPageElements.popup.sendPopup.confirmButton,
+    );
+
+    await playwright.waitAndClick(mainPageElements.tabs.activityButton);
+
+    await playwright.waitForText('.transaction-status-label', 'Confirmed');
+
+    return true;
+  },
+
+  async metamaskScreenshot(path) {
+    await switchToMetamaskIfNotActive();
+    await playwright.screenshot(path);
+    return true;
+  },
 };
+
+//   async sendContractTx(txObj)  {
+//   //   await switchToMetamaskIfNotActive();
+//   //   await playwright.waitAndClick(mainPageElements.featureTabs.sendButton);
+//   //   await playwright.waitAndGetInputValue(
+//   //     mainPageElements.popup.sendPopup.toInput,
+//   //       txObj.toAccount
+//   //   );
+//   // }
+// }
 
 async function switchToMetamaskIfNotActive() {
   if (await playwright.isCypressWindowActive()) {
