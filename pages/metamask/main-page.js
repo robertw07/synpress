@@ -18,7 +18,7 @@ const walletOverview = '.wallet-overview';
 
 const tabs = {
   assetsButton: '[data-testid="home__asset-tab"] button',
-  activityButton: '[data-testid="home__activity-tab"] button',
+  activityButton: '[data-testid="account-overview__activity-tab"] button',
 };
 
 const featureTabs = {
