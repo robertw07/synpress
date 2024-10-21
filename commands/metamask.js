@@ -1579,13 +1579,22 @@ const metamask = {
     }
   },
 
-  async sendNativeTx(txObj) {
+  async sendTransaction(txObj) {
     await switchToMetamaskIfNotActive();
     await playwright.waitAndClick(mainPageElements.featureTabs.sendButton);
     await playwright.waitAndType(
       mainPageElements.popup.sendPopup.toInput,
       txObj.toAccount,
     );
+
+    await playwright.waitAndClick(
+      mainPageElements.popup.sendPopup.selectTokenButton,
+    );
+    await playwright.waitAndClickByText(
+      mainPageElements.popup.sendPopup.tokenName,
+      txObj.tokenName,
+    );
+
     await playwright.waitAndType(
       mainPageElements.popup.sendPopup.currencyInput,
       txObj.amount,

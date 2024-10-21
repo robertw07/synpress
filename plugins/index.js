@@ -68,7 +68,7 @@ module.exports = (on, config) => {
     renameMetamaskAccount: metamask.renameAccount,
     switchMetamaskAccount: metamask.switchAccount,
     addMetamaskNetwork: metamask.addNetwork,
-    sendNativeTx: metamask.sendNativeTx,
+    sendTransaction: metamask.sendTransaction,
     metamaskScreenshot: metamask.metamaskScreenshot,
     changeMetamaskNetwork: async network => {
       if (process.env.NETWORK_NAME && !network) {

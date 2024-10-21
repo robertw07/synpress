@@ -1,9 +1,10 @@
 declare namespace Cypress {
   interface Chainable<Subject> {
 
-    sendNativeTx(txData?: {
+    sendTransaction(txData?: {
                    toAccount?:string
                    amount?:string
+                   tokenName?: string
     }): Chainable<boolean>;
 
     metamaskScreenshot(path: string): Chainable<boolean>;

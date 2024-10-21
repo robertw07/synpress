@@ -55,6 +55,8 @@ const popup = {
     cancelButton: `${sendPopupSelector} .btn-secondary`,
     transactionStatus: `${sendPopupSelector} .transaction-status`,
     copyTxIdButton: `${sendPopupSelector} .transaction-list-item-details__tx-hash .transaction-list-item-details__header-button a`,
+    selectTokenButton: '[data-testid="asset-picker-button"]',
+    tokenName: '[data-testid="multichain-token-list-item-token-name"]',
     // todo:
   },
 };
